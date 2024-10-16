@@ -1,0 +1,223 @@
+<html>
+  <head>
+    <title>Great Idea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        padding: 0 10%;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+      }
+      main {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+      h1, h2, h3 {
+        text-transform: uppercase;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        gap: 16px;
+      }
+      img[src$=".jpg"] {
+        border: 2px solid blue;
+      }
+      div:not(.section-wrapper) {
+        background-color: #e4e4e4;
+      }
+      div > p::first-letter {
+        font-size: 24px;
+      }
+      div[id^="content_"] {
+        color: #c96d6d;
+      }
+      
+      a:link { text-decoration: dashed; }
+      a:visited { text-decoration: none; color: violet; }
+      a:hover { text-decoration: underline; color: black; }
+      a:active { background-color: blue; color: white; }
+
+      /* classes */
+      .section-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid blue;
+        margin: 10px;
+      }
+      .content-box {
+        box-sizing: content-box;
+        background-color: lightcoral;
+      }
+      .border-box {
+        box-sizing: border-box;
+        background-color: lightgreen;
+      }
+
+      /* ids */
+      #nav_item {
+        background: none;
+        border: none;
+      }
+      #nav_item:hover {
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      #hero {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+      }
+      #hero_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      #hero_content h1 {
+        font-size: 40px;
+      }
+      #hero_content button {
+        padding: 14px 32px;
+        font-size: 16px;
+        background: none;
+        border-radius: 4px;
+        outline: none;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #hero_content button:hover {
+        cursor: pointer;
+        background-color: blue;
+        color: white;
+        border-color: blue;
+      }
+      #hero img {
+        border-radius: 100%;
+        height: 20em;
+        width: 20em;
+        object-fit: cover;
+      }
+      #hero img:hover {
+        transform: scale(1.2);
+      }
+      #content_container {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 24px 0;
+      }
+      #content_image_container {
+        max-height: 250px;
+        overflow: hidden;
+      }
+      #content_image_container img {
+        max-height: 250px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      @media (max-width: 1024px) {
+        header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        ul {
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .section-wrapper:not(ul) {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="section-wrapper">
+          <li><a id="nav_item" href="https://www.facebook.com" type="button">Facebook</a></li>
+          <li><a id="nav_item" href="https://www.twitter.com" type="button">Twitter</a></li>
+          <li><a id="nav_item" href="https://www.instagram.com" type="button">Instagram</a></li>
+          <li><a id="nav_item" href="https://www.linkedin.com" type="button">LinkedIn</a></li>
+          <li><a id="nav_item" href="https://www.youtube.com" type="button">YouTube</a></li>
+          <li><a id="nav_item" href="https://www.tiktok.com" type="button">TikTok</a></li>
+        </ul>
+      </nav>
+      <h2>Great Idea</h2>
+    </header>
+
+    <main>
+      <div id="hero" class="section-wrapper">
+        <div id="hero_content">
+          <h1>Innovation on Demand</h1>
+          <button type="button">Get Started</button>
+        </div>
+        <img alt="Hero Image" src="https://images.unsplash.com/photo-1721332153289-0c46dc38981b?q=80&w=3435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==.jpg">
+      </div>
+      <!-- <div class="box content-box">Content Box (content-box)</div>
+      <div class="box border-box">Border Box (border-box)</div> -->
+      <div id="content_container">
+        <div class="section-wrapper">
+          <div>
+            <h3>Features</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat gravida porttitor integer magna quis senectus sollicitudin taciti odio. Sollicitudin dignissim molestie feugiat amet laoreet ligula convallis luctus. Cursus duis pellentesque velit nibh magna justo taciti scelerisque. Elementum est praesent tristique nec habitant orci dui magna. Nibh et integer libero iaculis commodo penatibus tristique. Eget sed mauris sem diam netus eros ornare sodales.</p>
+          </div>
+          <div>
+            <h3>About</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat gravida porttitor integer magna quis senectus sollicitudin taciti odio. Sollicitudin dignissim molestie feugiat amet laoreet ligula convallis luctus. Cursus duis pellentesque velit nibh magna justo taciti scelerisque. Elementum est praesent tristique nec habitant orci dui magna. Nibh et integer libero iaculis commodo penatibus tristique. Eget sed mauris sem diam netus eros ornare sodales.</p>
+          </div>
+        </div>
+        <div id="content_image_container">
+          <img alt="Content Image" src="https://images.unsplash.com/photo-1728716858431-001a104dd639?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png"/>
+        </div>
+        <div class="section-wrapper">
+          <div>
+            <h3>Services</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat gravida porttitor integer magna quis senectus sollicitudin taciti odio. Sollicitudin dignissim molestie feugiat amet laoreet ligula convallis luctus. Cursus duis pellentesque velit nibh magna justo taciti scelerisque. Elementum est praesent tristique nec habitant orci dui magna. Nibh et integer libero iaculis commodo penatibus tristique. Eget sed mauris sem diam netus eros ornare sodales.</p>
+          </div>
+          <div>
+            <h3>Product</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat gravida porttitor integer magna quis senectus sollicitudin taciti odio. Sollicitudin dignissim molestie feugiat amet laoreet ligula convallis luctus. Cursus duis pellentesque velit nibh magna justo taciti scelerisque. Elementum est praesent tristique nec habitant orci dui magna. Nibh et integer libero iaculis commodo penatibus tristique. Eget sed mauris sem diam netus eros ornare sodales.</p>
+          </div>
+          <div>
+            <h3>Vision</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat gravida porttitor integer magna quis senectus sollicitudin taciti odio. Sollicitudin dignissim molestie feugiat amet laoreet ligula convallis luctus. Cursus duis pellentesque velit nibh magna justo taciti scelerisque. Elementum est praesent tristique nec habitant orci dui magna. Nibh et integer libero iaculis commodo penatibus tristique. Eget sed mauris sem diam netus eros ornare sodales.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h3>Contact</h3>
+      <p>
+        123 Way 456 Street<br/>
+        Somewhere, USA
+      </p>
+      <p>1 (888) 888-8888</p>
+      <p>sales@greatidea.io</p>
+      <p style="text-align: center;">Copyright Great Idea 2018</p>
+    </footer>
+  </body>
+</html>
